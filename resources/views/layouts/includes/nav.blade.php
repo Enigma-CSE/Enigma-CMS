@@ -167,7 +167,7 @@
                   </form>
                 </div>
               </div>
-              <a href="login.html" class="ep-header__account">
+              <a href="{{ route('login') }}" class="ep-header__account">
                 <i class="fi fi-rr-user"></i>
                 <div class="ep-header__account-info">
                     @auth

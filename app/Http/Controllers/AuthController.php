@@ -54,7 +54,7 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // dd("jai");
-            return redirect()->route('profile.index')->with('success','Logged In successfully');
+            return redirect()->route('home')->with('success','Logged In successfully');
         } else {
             // dd("shantaramag bedi");
             return redirect()->route('login')->with('error', 'Either email/password is incorrect');
