@@ -44,13 +44,13 @@
                 <div class="ep-auth__card-social">
                   <a href="#" target="_blank">
                     <img
-                      src="assets/images/icons/google.svg"
+                      src="{{ asset('assets/images/icons/google.svg') }}"
                       alt="google-icon"
                     />Login with Google
                   </a>
                   <a href="#" target="_blank">
                     <img
-                      src="assets/images/icons/facebook.svg"
+                      src="{{ asset('assets/images/icons/google.svg') }}"
                       alt="facebook-icon"
                     />Login with Facebook
                   </a>
@@ -60,7 +60,8 @@
                 </div>
               </div>
               <div class="ep-auth__card-body">
-                <form action="#" method="post" class="ep-auth__card-form">
+                <form action="{{ route('user.authenticate') }}" method="POST" class="ep-auth__card-form">
+                  @csrf
                   <div class="form-group">
                     <label>Your Email</label>
                     <input
