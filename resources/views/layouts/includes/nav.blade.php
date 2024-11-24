@@ -312,7 +312,7 @@
                     </ul>
                   </li> --}}
                   <li>
-                    <a href="#">Blog 
+                    <a href="{{ route('blog') }}">Blog 
                       {{-- <i class="fi fi-ss-angle-small-down"></i> --}}
                     </a>
                     {{-- <ul class="sub-menu">

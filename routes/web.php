@@ -15,6 +15,7 @@ Route::get('/activities', [HomeController::class ,'activities'])->name('activiti
 Route::get('/contact', [HomeController::class ,'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class ,'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class ,'blog'])->name('blog');
+Route::get('/blog-details', [HomeController::class ,'blogDetails'])->name('blog-details');
 Route::get('/team', [HomeController::class ,'team'])->name('team');
 Route::get('/team-details', [HomeController::class ,'teamDetails'])->name('team-details');
 
