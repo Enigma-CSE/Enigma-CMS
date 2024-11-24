@@ -60,8 +60,11 @@
                 </div>
               </div>
               <div class="ep-auth__card-body">
+
                 <form action="{{ route('user.authenticate') }}" method="POST" class="ep-auth__card-form">
+
                   @csrf
+                  
                   <div class="form-group">
                     <label>Your Email</label>
                     <input
