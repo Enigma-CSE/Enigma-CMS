@@ -219,7 +219,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="{{ route('courses') }}"
                       >Subjects
                        <i class="fi fi-ss-angle-small-down"></i>
                     </a>
@@ -239,19 +239,19 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="{{ route('team') }}"
                       >Team
                       <i class="fi fi-ss-angle-small-down"></i>
                     </a>
                     <ul class="sub-menu">
                       <li>
-                        <a href="/">Faculties</a>
+                        <a href="{{ route('team') }}">Faculties</a>
                       </li>
                       <li>
-                        <a href="/">Students</a>
+                        <a href="{{ route('team') }}">Students</a>
                       </li>
                       <li>
-                        <a href="/">Alumini</a>
+                        <a href="{{ route('team') }}">Alumini</a>
                       </li>
                     </ul>
                   </li>
@@ -312,7 +312,7 @@
                     </ul>
                   </li> --}}
                   <li>
-                    <a href="#">Blog 
+                    <a href="{{ route('blog') }}">Blog 
                       {{-- <i class="fi fi-ss-angle-small-down"></i> --}}
                     </a>
                     {{-- <ul class="sub-menu">
