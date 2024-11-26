@@ -37,4 +37,8 @@ class HomeController extends Controller
     public function course(){
         return view('course.index');
     }
+
+    public function courseDetails(){
+        return view('course.show');
+    }
 }
