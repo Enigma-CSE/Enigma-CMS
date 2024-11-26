@@ -33,4 +33,8 @@ class HomeController extends Controller
     public function blogDetails(){
         return view('blog.show');
     }
+
+    public function course(){
+        return view('course.index');
+    }
 }

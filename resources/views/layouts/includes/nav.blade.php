@@ -219,7 +219,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="{{ route('courses') }}"
                       >Subjects
                        <i class="fi fi-ss-angle-small-down"></i>
                     </a>
