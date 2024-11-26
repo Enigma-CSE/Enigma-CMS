@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [HomeController::class , 'home'])->name('home');
 Route::get("/about", [HomeController::class , 'about'])->name('about');
 Route::get('/courses', [HomeController::class , 'course'])->name('courses');
+Route::get('/course-details', [HomeController::class ,'courseDetails'])->name('course-details');
 Route::get('/events',[HomeController::class, 'events'])->name('events');
 Route::get('/students',[HomeController::class, 'students'])->name('students');
 Route::get('/faculties', [HomeController::class ,'faculties'])->name('faculties');
@@ -15,6 +16,7 @@ Route::get('/activities', [HomeController::class ,'activities'])->name('activiti
 Route::get('/contact', [HomeController::class ,'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class ,'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class ,'blog'])->name('blog');
+Route::get('/blog-details', [HomeController::class ,'blogDetails'])->name('blog-details');
 Route::get('/team', [HomeController::class ,'team'])->name('team');
 Route::get('/team-details', [HomeController::class ,'teamDetails'])->name('team-details');
 
