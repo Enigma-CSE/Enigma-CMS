@@ -16,13 +16,13 @@
               <h3 class="ep-breadcrumbs__title">Course details</h3>
               <ul class="ep-breadcrumbs__menu">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
                   <i class="fi-bs-angle-right"></i>
                 </li>
                 <li class="active">
-                  <a href="course-details.html">Course details</a>
+                  <a href="{{ route('course-details') }}">Course details</a>
                 </li>
               </ul>
             </div>

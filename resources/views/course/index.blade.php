@@ -16,13 +16,13 @@
               <h3 class="ep-breadcrumbs__title">Course</h3>
               <ul class="ep-breadcrumbs__menu">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
                   <i class="fi-bs-angle-right"></i>
                 </li>
                 <li class="active">
-                  <a href="course.html">Course</a>
+                  <a href="{{ route('courses') }}">Course</a>
                 </li>
               </ul>
             </div>
@@ -52,7 +52,7 @@
                   </select>
                 </div>
                 <form
-                  action="#"
+                  action="/"
                   method="post"
                   class="ep-course__search-form"
                 >
@@ -78,13 +78,13 @@
               data-wow-delay=".3s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/1.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep1-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep1-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -117,11 +117,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>World History: Ancient to Modern Times</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
@@ -136,13 +136,13 @@
               data-wow-delay=".5s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/2.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep2-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep2-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -175,11 +175,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>Environmental Science and Sustainability</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
@@ -194,13 +194,13 @@
               data-wow-delay=".7s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/3.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep4-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep4-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -233,11 +233,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>Modern Physics: Concepts and Applications</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
@@ -252,13 +252,13 @@
               data-wow-delay=".3s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/4.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep7-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep7-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -291,11 +291,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>Early Childhood Education Practices</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
@@ -310,13 +310,13 @@
               data-wow-delay=".5s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/5.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep4-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep4-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -349,11 +349,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>Embrace the power of better tomorrow education</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
@@ -368,13 +368,13 @@
               data-wow-delay=".7s"
               data-wow-duration="1s"
             >
-              <a href="course-details.html" class="ep-course__img">
+              <a href="{{ route('course-details') }}" class="ep-course__img">
                 <img
                   src="assets/images/course/course-1/6.png"
                   alt="course-img"
                 />
               </a>
-              <a href="course.html" class="ep-course__tag ep3-bg">Math</a>
+              <a href="{{ route('courses') }}" class="ep-course__tag ep3-bg">Math</a>
               <div class="ep-course__body">
                 <div class="ep-course__lesson">
                   <div class="ep-course__student">
@@ -407,11 +407,11 @@
                     </li>
                   </ul>
                 </div>
-                <a href="course-details.html" class="ep-course__title">
+                <a href="{{ route('course-details') }}" class="ep-course__title">
                   <h5>Basic Programming with Python</h5>
                 </a>
                 <div class="ep-course__bottom">
-                  <a href="course-details.html" class="ep-course__btn"
+                  <a href="{{ route('course-details') }}" class="ep-course__btn"
                     >Enroll Now <i class="fi fi-rs-arrow-small-right"></i>
                   </a>
                   <span class="ep-course__price">$50.00</span>
