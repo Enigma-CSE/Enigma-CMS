@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+            $table->string('phone');
+            $table->enum('qualification', ['BSc', 'MSc', 'PhD']);
+            $table->string('specialization');
+            $table->string('experience');
+            $table->string('designation');
             $table->timestamps();
         });
     }
