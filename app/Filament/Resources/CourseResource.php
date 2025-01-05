@@ -28,11 +28,11 @@ class CourseResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('course_name')->required(),
-                TextInput::make('course_code')->required(),
-                TextInput::make('course_description')->required(),
-                TextInput::make('course_credit')->required(),
-                TextInput::make('course_duration')->required(),
+                TextInput::make('course_name')->required()->label('Subject Name'),
+                TextInput::make('course_code')->required()->label('Subject Code'),
+                TextInput::make('course_description')->required()->label('Subject Description'),
+                TextInput::make('course_credit')->required()->label('Subject Credit'),
+                TextInput::make('course_semester')->required()->label('Semester'),
             ]);
     }
 

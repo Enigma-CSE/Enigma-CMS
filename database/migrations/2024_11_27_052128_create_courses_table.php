@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('course_code');
             $table->string('course_description');
             $table->string('course_credit');
-            $table->string('course_duration');
+            $table->enum('course_semester',['1','2','3','4','5','6','7','8'])->default('1');
             $table->timestamps();
         });
     }

@@ -16,15 +16,15 @@ class VerifyAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // if (!Auth::check()) {
-        //     return redirect()->route('login');
-        // }else if (Auth::check() && Auth::user()->is_admin && Auth::user()->is_verified && !Auth::user()->is_alumini) {
-        //     return $next($request);
-        // } else {
-        //     return redirect()->route('home');
-        // }
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else if (Auth::check() && Auth::user()->is_admin && Auth::user()->is_verified && !Auth::user()->is_alumini) {
+            return $next($request);
+        } else {
+            return redirect()->route('home');
+        }
 
-        //for testing purposes
+        // for testing purposes
 
         return $next($request);
 
