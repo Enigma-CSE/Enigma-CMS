@@ -22,5 +22,10 @@ Route::get('/team-details', [HomeController::class ,'teamDetails'])->name('team-
 
 Route::get('/login', [AuthController::class ,'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authenticate')->middleware('guest');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+Route::get('auth/google', [AuthController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google-callback', [AuthController::class, 'handleGoogleCallback'])->name('google.callback');
+Route::get('auth/github', [AuthController::class, 'redirectToGitHub'])->name('github.login');
+Route::get('auth/github-callback', [AuthController::class, 'handleGithubCallback'])->name('github.callback');
 
 Route::get('/register', [AuthController::class ,'showRegister'])->name('register');

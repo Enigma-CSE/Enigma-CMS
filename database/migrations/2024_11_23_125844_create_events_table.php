@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
+            $table->mediumText('name');
+            $table->longText('description');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->enum('event_type', ['workshop', 'webinar', 'seminar', 'conference', 'expo', 'meetup', 'hackathon']);
-            $table->string('location');
-            $table->string('banner')->nullable();
-            $table->string('poster')->nullable();
-            $table->string('speaker');
-            $table->string('speaker_mail');
-            $table->string('speaker_phone')->nullable();
+            $table->mediumText('location');
+            $table->mediumText('banner')->nullable();
+            $table->mediumText('poster')->nullable();
+            $table->mediumText('speaker');
+            $table->mediumText('speaker_mail');
+            $table->mediumText('speaker_phone')->nullable();
             $table->enum('status', ['draft', 'published', 'cancelled']);
             $table->boolean('is_featured')->default(false);
             $table->boolean('requires_registration')->default(true);

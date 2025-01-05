@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->string('phone');
-            $table->enum('qualification', ['BSc', 'MSc', 'PhD']);
-            $table->string('specialization');
-            $table->string('experience');
-            $table->string('designation');
+            $table->mediumText('name');
+            $table->mediumText('email');
+            $table->mediumText('password');
+            $table->mediumText('phone');
+            $table->enum('qualification', ['BSc', 'MSc', 'PhD', 'MPhil', 'BTech', 'MTech', 'BBA', 'MBA', 'BCom', 'MCom', 'BA', 'MA', 'BEd', 'MEd', 'BArch', 'MArch', 'BPharm', 'MPharm', 'BDS', 'MDS', 'MBBS', 'MD', 'MS', 'DM', 'MCh', 'PG Diploma', 'Others']);
+            $table->mediumText('specialization');
+            $table->mediumText('experience');
+            $table->mediumText('designation');
             $table->timestamps();
         });
     }

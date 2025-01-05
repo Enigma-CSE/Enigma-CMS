@@ -30,6 +30,8 @@ class User extends Authenticatable
         'is_admin',
         'is_verified',
         'image',
+        'google_id',
+        'github_id',
     ];
 
     /**
