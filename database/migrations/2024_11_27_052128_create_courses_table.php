@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('course_name');
-            $table->string('course_code');
-            $table->string('course_description');
-            $table->string('course_credit');
+            $table->mediumText('course_name');
+            $table->mediumText('course_code');
+            $table->mediumText('course_description');
+            $table->mediumText('course_credit');
             $table->enum('course_semester',['1','2','3','4','5','6','7','8'])->default('1');
             $table->timestamps();
         });

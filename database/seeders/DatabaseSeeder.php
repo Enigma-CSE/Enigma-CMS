@@ -23,13 +23,13 @@ class DatabaseSeeder extends Seeder
             'is_verified' => true,
             'is_alumini' => false,
         ]);
-        User::factory()->create([
-            'name' => 'Darshan Bhandary',
-            'email' => 'drshnbhandary@gmail.com',
-            'password'=> bcrypt('12345678'),
-            'is_admin' => false,
-            'is_verified' => true,
-            'is_alumini' => false,
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Darshan Bhandary',
+        //     'email' => 'drshnbhandary@gmail.com',
+        //     'password'=> bcrypt('12345678'),
+        //     'is_admin' => false,
+        //     'is_verified' => true,
+        //     'is_alumini' => false,
+        // ]);
     }
 }

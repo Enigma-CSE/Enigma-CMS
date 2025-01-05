@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -69,5 +71,79 @@ class AuthController extends Controller
         // dd("logout");
         Auth::logout();
         return redirect()->route('home')->with('success', "Logged Out Sucessfully!");
+    }
+
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogleCallback()
+    {
+        try {
+            $googleUser = Socialite::driver('google')->user();
+        // dd($googleUser);
+
+        $user = User::where('google_id', $googleUser->id)->first();
+
+        if ($user) {
+            Auth::login($user);
+            return redirect()->route('home');
+        }else{
+            $newUser = User::create([
+                'name' => $googleUser->name,
+                'email' => $googleUser->email,
+                'google_id' => $googleUser->id,
+                'password' => Hash::make($googleUser->name . time() . $googleUser->id),
+                'email_verified_at' => now(),
+                'image' => $googleUser->avatar, 
+            ]);
+
+            if ($newUser) {
+                Auth::login($newUser);
+                return redirect()->route('home');
+            }
+        }
+        } catch (Exception $e) {
+            //throw $th;
+            dd($e->getMessage());
+        }
+    }
+
+    public function redirectToGitHub()
+    {
+        return Socialite::driver('github')->redirect();
+    }
+
+    public function handleGithubCallback()
+    {
+        try{
+            $githubUser = Socialite::driver('github')->user();
+            
+            // dd($githubUser);
+            
+            $user = User::where('github_id', $githubUser->id)->first();
+            
+            if ($user) {
+                Auth::login($user);
+                return redirect()->route('home');
+            }else{
+                $newUser = User::create([
+                    'name' => $githubUser->name,
+                    'email' => $githubUser->email,
+                    'github_id' => $githubUser->id,
+                    'password' => Hash::make($githubUser->name . time() . $githubUser->id),
+                    'email_verified_at' => now(),
+                    'image' => $githubUser->avatar, 
+                ]);
+                
+                if ($newUser) {
+                    Auth::login($newUser);
+                    return redirect()->route('home');
+                }
+            }
+        }catch(Exception $e){
+            dd($e->getMessage());
+        }
     }
 }

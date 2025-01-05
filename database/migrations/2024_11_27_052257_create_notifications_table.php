@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->string('circular')->nullable();
+            $table->mediumText('name');
+            $table->mediumText('description');
+            $table->mediumText('circular')->nullable();
+            $table->enum('for',['1','2','3','4','5','6','7','8','all'])->default('all');
             $table->timestamps();
         });
     }

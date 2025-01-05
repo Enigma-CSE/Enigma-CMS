@@ -42,17 +42,17 @@
                 <h3 class="ep-auth__card-title">Welcome back!</h3>
                 <p class="ep-auth__card-text">Log in to your account</p>
                 <div class="ep-auth__card-social">
-                  <a href="#" target="_blank">
+                  <a href="{{ route('google.login') }}">
                     <img
                       src="{{ asset('assets/images/icons/google.svg') }}"
                       alt="google-icon"
                     />Login with Google
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="{{ route('github.login') }}" target="_blank">
                     <img
                       src="{{ asset('assets/images/icons/google.svg') }}"
                       alt="facebook-icon"
-                    />Login with Facebook
+                    />Login with Github
                   </a>
                 </div>
                 <div class="ep-auth__another-way">
