@@ -21,6 +21,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'email_verified_at',
+        'remember_token',
+        'usn',
+        'phone',
+        'semester',
+        'is_alumini',
+        'is_admin',
+        'is_verified',
+        'image',
     ];
 
     /**
