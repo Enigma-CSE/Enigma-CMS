@@ -54,6 +54,10 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // dd("jai");
+            if (Auth::user()->is_admin) {
+                // dd("jai");
+                return redirect('/admin')->with('success','Logged In successfully');
+            }
             return redirect()->route('home')->with('success','Logged In successfully');
         } else {
             // dd("shantaramag bedi");
