@@ -14,6 +14,7 @@ use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -64,8 +65,14 @@ class UserResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('image')->circular(),
-                TextColumn::make('name'),
-                TextColumn::make('email'),
+                TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('usn')->searchable()->sortable(),
+                TextColumn::make('email')->searchable()->sortable(),
+                TextColumn::make('semester')->searchable()->sortable(),
+                TextColumn::make('phone')->searchable()->sortable(),
+                IconColumn::make('is_alumini')->boolean()->searchable()->sortable(),
+                IconColumn::make('is_admin')->boolean()->searchable()->sortable(),
+                IconColumn::make('is_verified')->boolean()->searchable()->sortable(),
             ])
             ->filters([
                 //
