@@ -31,3 +31,5 @@ Route::get('auth/github', [AuthController::class, 'redirectToGitHub'])->name('gi
 Route::get('auth/github-callback', [AuthController::class, 'handleGithubCallback'])->name('github.callback');
 
 Route::get('/register', [AuthController::class ,'showRegister'])->name('register');
+Route::get('/events',[HomeController::class, 'events'])->name('events.index');
+Route::get('/event-details',[HomeController::class, 'eventDetails'])->name('event.show');

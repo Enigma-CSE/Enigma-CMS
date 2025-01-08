@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -46,5 +47,15 @@ class HomeController extends Controller
 
     public function courseDetails(){
         return view('course.show');
+    }
+
+    public function events(){
+        $events = Event::all();
+        // dd($events);
+        return view('events.index', compact('events'));
+    }
+
+    public function eventDetails(){
+        return view('events.show');
     }
 }
