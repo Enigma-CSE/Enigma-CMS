@@ -37,16 +37,9 @@
         <div class="row">
           <!-- Single Team -->
           <div class="col-lg-6 col-xl-4 col-md-6 col-12">
-            <div
-              class="ep-team__card ep-team__card--style3 wow fadeInUp"
-              data-wow-delay=".3s"
-              data-wow-duration="1s"
-            >
+            <div class="ep-team__card ep-team__card--style3 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s" >
               <a href="{{ route('team-details') }}" class="ep-team__img">
-                <img
-                  src="assets/images/team/team-1/1.png"
-                  alt="team-img"
-                />
+                <img src="assets/images/team/team-1/1.png" alt="team-img" />
               </a>
               <div class="ep-team__content">
                 <div class="ep-team__author">
