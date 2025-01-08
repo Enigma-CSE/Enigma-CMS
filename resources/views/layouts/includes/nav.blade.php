@@ -231,18 +231,18 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{ route('team') }}">Team
+                  <a href="{{ route('faculties') }}">Team
                     <i class="fi fi-ss-angle-small-down"></i>
                   </a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="{{ route('team') }}">Faculties</a>
+                      <a href="{{ route('faculties') }}">Faculties</a>
                     </li>
                     <li>
-                      <a href="{{ route('team') }}">Students</a>
+                      <a href="{{ route('students') }}">Students</a>
                     </li>
                     <li>
-                      <a href="{{ route('team') }}">Alumini</a>
+                      <a href="{{ route('alumini') }}">Alumini</a>
                     </li>
                   </ul>
                 </li>

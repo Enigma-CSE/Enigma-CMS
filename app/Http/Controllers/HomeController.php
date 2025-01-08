@@ -18,8 +18,14 @@ class HomeController extends Controller
         return view('contact.index');
     }
 
-    public function team(){
-        return view('team.index');
+    public function student(){
+        return view('team.student.index');
+    }
+    public function faculty(){
+        return view('team.faculty.index');
+    }
+    public function alumini(){
+        return view('team.alumini.index');
     }
 
     public function teamDetails(){

@@ -17,7 +17,9 @@ Route::get('/contact', [HomeController::class ,'contact'])->name('contact');
 Route::get('/gallery', [HomeController::class ,'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class ,'blog'])->name('blog');
 Route::get('/blog-details', [HomeController::class ,'blogDetails'])->name('blog-details');
-Route::get('/team', [HomeController::class ,'team'])->name('team');
+Route::get('/students', [HomeController::class ,'student'])->name('students');
+Route::get('/faculties', [HomeController::class ,'faculty'])->name('faculties');
+Route::get('/alumini', [HomeController::class ,'alumini'])->name('alumini');
 Route::get('/team-details', [HomeController::class ,'teamDetails'])->name('team-details');
 
 Route::get('/login', [AuthController::class ,'login'])->name('login')->middleware('guest');
