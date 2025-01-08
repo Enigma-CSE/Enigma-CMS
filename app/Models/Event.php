@@ -27,4 +27,9 @@ class Event extends Model
         'notify_attendance',
         'attendance_code_is_valid',
     ];
+
+    public function registerations()
+    {
+        return $this->hasMany(EventRegisteration::class);
+    }
 }

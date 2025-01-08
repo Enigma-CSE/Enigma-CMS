@@ -31,9 +31,18 @@ use Illuminate\Support\Facades\Storage;
 class EventResource extends Resource
 {
     protected static ?string $model = Event::class;
+    protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
+    protected static ?string $navigationGroup = 'Event Management';
+    protected static ?string $navigationLabel = 'Events';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    // protected static ?string $activeNavigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationBadgeTooltip = 'The number of events';
 
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function form(Form $form): Form
     {
         return $form
