@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\UserExporter;
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
@@ -17,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ExportAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
@@ -81,6 +83,9 @@ class UserResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                ExportAction::make()->exporter(UserExporter::class),
+                ])
             ->actions([
                 ActionGroup::make([
                     ViewAction::make(),
