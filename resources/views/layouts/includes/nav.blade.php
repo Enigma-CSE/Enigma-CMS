@@ -226,7 +226,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="#">Events
+                  <a href="{{ route('events.index') }}">Events
                     {{-- <i class="fi fi-ss-angle-small-down"></i> --}}
                   </a>
                 </li>

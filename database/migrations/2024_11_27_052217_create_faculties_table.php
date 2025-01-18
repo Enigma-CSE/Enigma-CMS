@@ -17,10 +17,10 @@ return new class extends Migration
             $table->mediumText('email');
             $table->mediumText('password');
             $table->mediumText('phone');
-            $table->enum('qualification', ['BSc', 'MSc', 'PhD', 'MPhil', 'BTech', 'MTech', 'BBA', 'MBA', 'BCom', 'MCom', 'BA', 'MA', 'BEd', 'MEd', 'BArch', 'MArch', 'BPharm', 'MPharm', 'BDS', 'MDS', 'MBBS', 'MD', 'MS', 'DM', 'MCh', 'PG Diploma', 'Others']);
+            $table->mediumText('qualification');
             $table->mediumText('specialization');
             $table->mediumText('experience');
-            $table->mediumText('designation');
+            $table->enum('designation',['HoD', 'Professor', 'Associate Professor', 'Assistant Professor', 'Lecturer', 'Others'])->default('Assistant Professor');
             $table->timestamps();
         });
     }
